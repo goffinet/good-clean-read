@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Decription du moteur good clean read"
 toc: true
 description: "Un modèle Jekyll pour publier des sites Web et des articles d'une seule page qui sont très lisibles et responsive"
