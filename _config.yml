@@ -25,7 +25,6 @@ defaults:
       layout: default
       read_time: true
       toc: true
-      permalink: /:title/
 
 # Build settings
 markdown: kramdown
