@@ -2,8 +2,8 @@
 title: Page Bien Lisible
 tag_text: Page Bien Lisible
 description: A responsive template for publishing single-page websites, articles that are easy on the eyes
-url: "https://goffinet.gitlab.io/good-clean-read"
-baseurl: ""
+url: "https://goffinet.gitlab.io"
+baseurl: "/good-clean-read"
 
 font-awesome-include: true # make this false if you don't need font-awesome
 
