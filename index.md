@@ -6,7 +6,7 @@ description: "Un modèle Jekyll pour publier des sites Web et des articles d'une
 ### Liste des articles
 
 {% for post in site.posts %}
-<a href="{{post.url}}">{{post.title}}</a>
+<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
 {% endfor %}
 
 ### Auteur
