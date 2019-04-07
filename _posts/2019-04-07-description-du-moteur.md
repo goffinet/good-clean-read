@@ -73,7 +73,7 @@ Si vous en avez besoin, vous pouvez coller n'importe laquelle de ces [1513 icôn
 
 Images play nicely with this template as well. Add diagrams or charts to make your point, and the template will fit them in appropriately.
 
-![Hello](/images/hello.svg)
+![Hello]({{site.baseurl}}/images/hello.svg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
