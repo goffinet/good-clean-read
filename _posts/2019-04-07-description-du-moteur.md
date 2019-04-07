@@ -79,7 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Contributions
 
-* [Adam Dueck](https://github.com/adueck) avec [good-clean-read](https://github.com/adueck/good-clean-read)
+* [Adam Dueck](https://github.com/adueck) avec [good-clean-read](https://github.com/adueck/good-clean-read).
 * [Shu Uesengi](https://github.com/chibicode) avec [solo](https://github.com/chibicode).
 
 ---
