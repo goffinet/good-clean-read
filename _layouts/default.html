@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/solo.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+  <!-- old link to font-awesome
+  {% if site.font-awesome-include %}<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">{% endif %}
+  -->
+  {% if site.font-awesome-include %}<link href="{{ site.baseurl }}/assets/fontawesome-free-5.8.1-web/css/all.css" rel="stylesheet"> <!--load all styles -->{% endif %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/rrssb.css">
+  <script src="{{ site.baseurl }}/assets/scripts/jquery.js"></script>
+  <link rel="canonical" href="{{ site.url }}" />
+  {% if site.google_analytics %}{% include google_analytics.html %}{% endif %}
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image:width" content="180">
+  <meta property="og:image:height" content="270">
+  <meta property="og:title" content="Page Bien Lisible">
+  <meta property="og:description" content="Un mod&egrave;le Jekyll pour publier des sites Web et des articles d'une seule page qui sont tr&egrave;s lisibles et responsive">
+  <meta property="og:url" content="{{ site.baseurl }}">
+  <meta property="og:image" content="{{ site.baseurl }}/og-image.jpg">
+{% seo %}
+</head>
+<body>
+  <article>
+   <div class="container">
+
+    {% if page.title %}
+    <h1>{{ page.title }}</h1>
+    {% else %}
+    <h1><a href="./">{{ site.tag_text }}</a></h1>
+    {% endif %}
+
+    {% if page.description %}
+    <h2>{{ page.description }}</h2>
+    {% endif %}
+
+    {% if page.read_time %}
+    <p><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}.</p>
+    {% endif %}
+    {% if page.last_modified_at %}
+    <p><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Mis à jour le <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{% assign dy = page.last_modified_at | date: "%a" %}{% case dy %}{% when "Mon" %}Lundi{% when "Tue" %}Mardi{% when "Wed" %}Mercredi{% when "Thu" %}Jeudi{% when "Fri" %}Vendredi{% when "Sat" %}Samedi{% when "Sun" %}Dimanche{% else %}{{ dy }}{% endcase %} {% assign d = page.last_modified_at | date: "%-d"  %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = page.last_modified_at | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ page.last_modified_at | date: '%Y' }}</time>.</p>
+    {% elsif page.date %}
+    <p><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Mis à jour le <time datetime="{{ page.date | date_to_xmlschema }}">{% assign dy = page.date | date: "%a" %}{% case dy %}{% when "Mon" %}Lundi{% when "Tue" %}Mardi{% when "Wed" %}Mercredi{% when "Thu" %}Jeudi{% when "Fri" %}Vendredi{% when "Sat" %}Samedi{% when "Sun" %}Dimanche{% else %}{{ dy }}{% endcase %} {% assign d = page.date | date: "%-d"  %}{% case d %}{% when '1' %}{{ d }}er{% else %}{{ d }}{% endcase %} {% assign m = page.date | date: "%-m" %}{% case m %}{% when '1' %}janvier{% when '2' %}février{% when '3' %}mars{% when '4' %}avril{% when '5' %}mai{% when '6' %}juin{% when '7' %}juillet{% when '8' %}août{% when '9' %}septembre{% when '10' %}octobre{% when '11' %}novembre{% when '12' %}décembre{% endcase %} {{ page.date | date: '%Y' }}</time>.</p>
+    {% endif %}
+
+    {% if page.toc %}
+    <h3>Table des matières</h3>
+    {% include toc.html html=content %}
+    {% endif %}
+
+    {{ content }}
+    </div>
+
+    <div class="container">
+    <hr>
+    {% include social.html %}
+    </div>
+  </article>
+<script src="{{ site.baseurl }}/assets/scripts/rrssb.min.js"></script>
+</body>
+</html>

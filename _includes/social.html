@@ -1,0 +1,10 @@
+<p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.url }}" itemprop="url">{{ site.title }}</a>. Propulsé par <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>.</p>
+<p>
+{% if site.email %}<a href="mailto:{{ site.email | encode_email }}"><i class="fas fa-envelope fa-4x"></i></a>{% endif %}
+{% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub"><i class="fab fa-github fa-4x"></i></a>{% endif %}
+{% if site.linkedin_username %}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-4x"></i></a>{% endif %}
+{% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="Twitter"><i class="fab fa-twitter fa-4x"></i></a>{% endif %}
+{% if site.youtube_channel %}<a href="https://youtube.com/channel/{{ site.youtube_channel }}" target="_blank" title="Twitter"><i class="fab fa-youtube fa-4x"></i></a>{% endif %}
+{% if site.slideshare_username %}<a href="https://fr.slideshare.net/{{ site.slideshare_username }}" target="_blank" title="Twitter"><i class="fab fa-slideshare fa-4x"></i></a>{% endif %}
+{% if site.gitbook_username %}<a href="https://legacy.gitbook.com/@{{ site.gitbook_username }}" target="_blank" title="Twitter"><i class="fas fa-book fa-4x"></i></a>{% endif %}
+</p>

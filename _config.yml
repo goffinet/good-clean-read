@@ -1,0 +1,41 @@
+# Site settings
+title: Page Bien Lisible
+tag_text: Page Bien Lisible
+description: A responsive template for publishing single-page websites, articles that are easy on the eyes
+url: "http://127.0.0.1:4000"
+baseurl: ""
+
+font-awesome-include: true # make this false if you don't need font-awesome
+
+github_username: rob #test
+twitter_username: #test
+linkedin_username: rob #test
+youtube_channel: #test
+slideshare_username: #test
+gitbook_username: #test
+
+google_analytics: #
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: default
+      read_time: true
+      toc: true
+      permalink: /:title/
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
